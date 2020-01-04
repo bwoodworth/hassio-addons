@@ -1,6 +1,6 @@
 {
     "name": "HASSIO Pentair Screenlogic AddON",
-    "version": "0.1",
+    "version": "0.0.1",
     "slug": "pentair_screenlogic",
     "description": "Gets state from Screelogic interface, controls pool and spa",
     "startup": "before",
