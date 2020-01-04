@@ -1,5 +1,5 @@
 {
     "name": "HASSIO Pentair Screenlogic AddON",
-    "url": "https://github.com/krk628/hassio-screenlogic-addon",
-    "maintainer": "Kacy Koelliker <kacy@koellikers.com>"
+    "url": "https://github.com/bwoodworth/hassio-screenlogic",
+    "maintainer": "Brian Woodworth"
   }
