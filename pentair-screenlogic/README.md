@@ -1,4 +1,4 @@
-** Credit goes to https://github.com/krk628/hassio-screenlogic-addon for creating the initial proof of concept that htis plugin is based on
+** Credit goes to https://github.com/krk628/hassio-screenlogic-addon for creating the initial proof of concept that this plugin is based on
 
 # Control Pentair Pool Circuits via Screenlogic IP and Recieve Status updates
 
