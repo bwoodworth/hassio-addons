@@ -1,7 +1,7 @@
 {
   "name": "Pentair Screenlogic",
-  "version": "1.0",
-  "slug": "pentair_screenlogic_dev",
+  "version": "1.1",
+  "slug": "pentair_screenlogic",
   "description": "Pentair Screenlogic",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "before",
