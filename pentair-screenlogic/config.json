@@ -1,11 +1,23 @@
 {
-  "name": "Pentair Screenlogic",
-  "version": "0.1",
-  "slug": "pentair_screenlogic",
-  "description": "Gets state from Screelogic interface, controls pool and spa",
+  "name": "Pentair Screenlogic DEV",
+  "version": "0.3",
+  "slug": "pentair_screenlogic_dev",
+  "description": "Pentair Screenlogic DEV",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "before",
   "boot": "auto",
-  "options": {},
-  "schema": {}
+  "options": {
+    "MQTT_server": "127.0.0.1",
+    "MQTT_port": "1883",
+    "MQTT_user": "hassio",
+    "MQTT_password": "hassio",
+	"ScreenLogic_server": "127.0.0.1"
+  },
+  "schema": {
+    "MQTT_server": "str",
+    "MQTT_port": "str",
+    "MQTT_user": "str",
+    "MQTT_password": "str",
+	"ScreenLogic_server": "str"
+  }
 }
