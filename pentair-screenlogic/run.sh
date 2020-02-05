@@ -17,6 +17,8 @@ CLEANERCIRCUIT=$(jq --raw-output ".cleaner_circuit" $CONFIG_PATH)
 
 cd /node_modules/node-screenlogic
 
+node initialize.js $SCREENLOGICIP
+
 while [ 1 ]; do
 # change IP address (-h) port (-p) username (-u) and password (-P) to match your MQTT broker settings
 PAYLOAD=`mosquitto_sub -h $MQTTIP -p $MQTTPORT -u $MQTTUSER -P $MQTTPASS -v -t /pentair/# -W 10 -C 1`
