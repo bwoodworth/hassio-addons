@@ -6,5 +6,5 @@
 ## 1.2
 - Added initialize.js to display system infor on startup
 
-## 1.3
+## 1.4
 - Fixed mqtt topics
