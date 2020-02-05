@@ -1,13 +1,13 @@
 switch:
   - platform: mqtt
     name: pentair_pool
-    command_topic: /pentair/circuit/505/command
-    state_topic: /pentair/circuit/505/state
+    command_topic: pentair/circuit/505/command
+    state_topic: pentair/circuit/505/state
 
   - platform: mqtt
     name: pentair_spa
-    command_topic: /pentair/circuit/500/command
-    state_topic: /pentair/circuit/500/state
+    command_topic: pentair/circuit/500/command
+    state_topic: pentair/circuit/500/state
 
 # You can create more switches for other circuits in you pool controller (lights, jets, cleaner, etc.)  
 # Just use the same convention and change the circuit ID
@@ -17,37 +17,37 @@ sensor:
 
   - platform: mqtt
     name: pentair_pooltemp
-    state_topic: /pentair/pooltemp/state
+    state_topic: pentair/pooltemp/state
 
   - platform: mqtt
     name: pentair_spatemp
-    state_topic: /pentair/spatemp/state
+    state_topic: pentair/spatemp/state
 
   - platform: mqtt
     name: pentair_airtemp
-    state_topic: /pentair/airtemp/state
+    state_topic: pentair/airtemp/state
 
   - platform: mqtt
     name: pentair_alkalinity
-    state_topic: /pentair/alkalinity/state
+    state_topic: pentair/alkalinity/state
 
   - platform: mqtt
     name: pentair_calcium
-    state_topic: /pentair/calcium/state
+    state_topic: pentair/calcium/state
 
   - platform: mqtt
     name: pentair_cyanuricacid
-    state_topic: /pentair/cyanuricacid/state
+    state_topic: pentair/cyanuricacid/state
 
   - platform: mqtt
     name: pentair_ph
-    state_topic: /pentair/ph/state
+    state_topic: pentair/ph/state
 
   - platform: mqtt
     name: pentair_saltppm
-    state_topic: /pentair/saltppm/state
+    state_topic: pentair/saltppm/state
 
   - platform: mqtt
     name: pentair_saturation
-    state_topic: /pentair/saturation/state
+    state_topic: pentair/saturation/state
 

@@ -30,140 +30,140 @@ else
   MESSAGE=`echo $PAYLOAD | awk '{print $2}'`
 
   case $TOPIC in
-    "/pentair/circuit/500/command")
+    "pentair/circuit/500/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 500 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 500 0
     fi
     ;;
-    "/pentair/circuit/501/command")
+    "pentair/circuit/501/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 501 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 501 0
     fi
     ;;
-    "/pentair/circuit/502/command")
+    "pentair/circuit/502/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 502 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 502 0
     fi
     ;;
-    "/pentair/circuit/503/command")
+    "pentair/circuit/503/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 503 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 503 0
     fi
     ;;
-    "/pentair/circuit/504/command")
+    "pentair/circuit/504/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 504 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 504 0
     fi
     ;;
-    "/pentair/circuit/505/command")
+    "pentair/circuit/505/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 505 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 505 0
     fi
     ;;
-    "/pentair/circuit/506/command")
+    "pentair/circuit/506/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 506 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 506 0
     fi
     ;;
-    "/pentair/circuit/507/command")
+    "pentair/circuit/507/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 507 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 507 0
     fi
     ;;
-    "/pentair/circuit/508/command")
+    "pentair/circuit/508/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 508 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 508 0
     fi
     ;;
-    "/pentair/circuit/509/command")
+    "pentair/circuit/509/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 509 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 509 0
     fi
     ;;
-    "/pentair/circuit/510/command")
+    "pentair/circuit/510/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 510 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 510 0
     fi
     ;;
-    "/pentair/circuit/511/command")
+    "pentair/circuit/511/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 511 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 511 0
     fi
     ;;
-    "/pentair/circuit/512/command")
+    "pentair/circuit/512/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 512 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 512 0
     fi
     ;;
-    "/pentair/circuit/513/command")
+    "pentair/circuit/513/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 513 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 513 0
     fi
     ;;
-    "/pentair/circuit/514/command")
+    "pentair/circuit/514/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 514 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 514 0
     fi
     ;;
-    "/pentair/circuit/515/command")
+    "pentair/circuit/515/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 515 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 515 0
     fi
     ;;
-    "/pentair/circuit/516/command")
+    "pentair/circuit/516/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 516 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 516 0
     fi
     ;;
-    "/pentair/circuit/517/command")
+    "pentair/circuit/517/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 517 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 517 0
     fi
     ;;
-    "/pentair/circuit/518/command")
+    "pentair/circuit/518/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 518 1
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 518 0
     fi
     ;;
-    "/pentair/circuit/519/command")
+    "pentair/circuit/519/command")
     if [ "${MESSAGE}" == "ON" ]; then
       ./set_circuit $SCREENLOGICIP 519 1
     elif [ "${MESSAGE}" == "OFF" ]; then
