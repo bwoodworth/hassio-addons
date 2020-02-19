@@ -8,3 +8,6 @@
 
 ## 1.4
 - Fixed mqtt topics
+
+## 1.5
+- Fixed mqtt subscription topics
