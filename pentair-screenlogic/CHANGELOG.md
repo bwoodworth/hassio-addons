@@ -11,3 +11,6 @@
 
 ## 1.5
 - Fixed mqtt subscription topics
+
+## 1.6
+- Added IntelliChem sensors back in
