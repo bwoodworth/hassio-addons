@@ -14,3 +14,6 @@
 
 ## 1.6
 - Added IntelliChem sensors back in
+
+## 1.8
+- Added IntelliChem sensors back in
