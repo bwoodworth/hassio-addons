@@ -44,7 +44,7 @@ function connect(client) {
     console.log(' Number of bodyArray Objects=' + config.bodyArray.length);
     console.log(' bodyArray=');
     var i;
-    for(i = 0; i < config.bodyArray.length; I++)
+    for(i = 0; i < config.bodyArray.length; i++)
     {
       console.log('   circuitId: ' + config.bodyArray[i].circuitId);
 	    console.log('     name: ' + config.bodyArray[i].name);
