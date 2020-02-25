@@ -20,3 +20,6 @@
 
 ## 1.9
 - Updated circuits to be dynamic
+
+## 1.11
+- typos and mistakes

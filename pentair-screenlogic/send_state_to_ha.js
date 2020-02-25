@@ -20,7 +20,7 @@ function connect(client) {
     console.log('pentair/ph/state,' + status.pH);
     console.log('pentair/saturation/state,' + status.saturation);
     var i;
-    for(i = 0; i < config.bodyArray.length; i++)
+    for(i = 0; i < status.circuitArray.length; i++)
     {
       console.log('pentair/circuit/' + status.circuitArray[i].id + '/state,' + (status.circuitArray[i].state ? 'ON' : 'OFF'));
     }
