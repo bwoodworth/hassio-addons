@@ -16,4 +16,7 @@
 - Added IntelliChem sensors back in
 
 ## 1.8
-- Added IntelliChem sensors back in
+- fixed new line issue
+
+## 1.9
+- Updated circuits to be dynamic
