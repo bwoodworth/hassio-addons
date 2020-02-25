@@ -16,9 +16,9 @@ function connect(client) {
     console.log('pentair/pooltemp/state,' + status.currentTemp[0]);
     console.log('pentair/spatemp/state,' + status.currentTemp[1]);
     console.log('pentair/airtemp/state,' + status.airTemp);
-    console.log('pentair/saltppm/state,' + status.saltPPM);
-    console.log('pentair/ph/state,' + status.pH);
-    console.log('pentair/saturation/state,' + status.saturation);
+    //console.log('pentair/saltppm/state,' + status.saltPPM);
+    //console.log('pentair/ph/state,' + status.pH);
+    //console.log('pentair/saturation/state,' + status.saturation);
 	console.log('pentair/circuit/' + status.circuitArray[0].id + '/state,' + (status.circuitArray[0].state ? 'ON' : 'OFF'));
 	console.log('pentair/circuit/' + status.circuitArray[1].id + '/state,' + (status.circuitArray[1].state ? 'ON' : 'OFF'));
 	console.log('pentair/circuit/' + status.circuitArray[2].id + '/state,' + (status.circuitArray[2].state ? 'ON' : 'OFF'));
@@ -33,10 +33,20 @@ function connect(client) {
 	console.log('pentair/circuit/' + status.circuitArray[11].id + '/state,' + (status.circuitArray[11].state ? 'ON' : 'OFF'));
 	console.log('pentair/circuit/' + status.circuitArray[12].id + '/state,' + (status.circuitArray[12].state ? 'ON' : 'OFF'));
 	console.log('pentair/circuit/' + status.circuitArray[13].id + '/state,' + (status.circuitArray[13].state ? 'ON' : 'OFF'));
+    //if (status.isSpaActive()) {
+    //    console.log('pentair/spa/state,ON');
+    //} else {
+    //    console.log('pentair/spa/state,OFF');
+    //}
+    //if (status.isPoolActive()) {
+    //    console.log('pentair/pool/state,ON');
+    //} else {
+    //    console.log('pentair/pool/state,OFF');
+    //}
   }).on('chemicalData', function(chemData) {
-    console.log('pentair/calcium/state,' + chemData.calcium);
-    console.log('pentair/cyanuricacid/state,' + chemData.cyanuricAcid);
-    console.log('pentair/alkalinity/state,' + chemData.alkalinity);
+    //console.log('pentair/calcium/state,' + chemData.calcium);
+    //console.log('pentair/cyanuricacid/state,' + chemData.cyanuricAcid);
+    //console.log('pentair/alkalinity/state,' + chemData.alkalinity);
     client.close();
   });
 
