@@ -1,18 +1,17 @@
 #!/usr/bin/node
-// Send command to set the state of a circuit.
- 
+// Send command to set the temp of Pool or Spa heater. 
+
 const ScreenLogic = require('./index');
 
 var myArgs = process.argv.slice(2);
 
 connect(new ScreenLogic.UnitConnection(80, myArgs[0]), parseInt(myArgs[1]), parseInt(myArgs[2]));
 
-function connect(client, circuit, onoff) {
+function connect(client, heater, temp) {
   client.on('loggedIn', function() {
-    this.setCircuitState(0, circuit, onoff);
+    this.setSetPoint(0, heater, temp);
     client.close();
   });
 
   client.connect();
 }
-

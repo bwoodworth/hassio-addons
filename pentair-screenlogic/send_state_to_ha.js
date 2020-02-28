@@ -16,6 +16,24 @@ function connect(client) {
     console.log('pentair/pooltemp/state,' + status.currentTemp[0]);
     console.log('pentair/spatemp/state,' + status.currentTemp[1]);
     console.log('pentair/airtemp/state,' + status.airTemp);
+	if(status.heatMode[0] == 3)
+	{
+		console.log('pentair/heater/pool/mode/state,heat');
+	}
+	else
+	{
+		console.log('pentair/heater/pool/mode/state,off');
+	}
+	if(status.heatMode[1] == 3)
+	{
+		console.log('pentair/heater/spa/mode/state,heat');
+	}
+	else
+	{
+		console.log('pentair/heater/spa/mode/state,off');
+	}
+    console.log('pentair/heater/pool/setpoint/state,' + status.setPoint[0]);
+    console.log('pentair/heater/spa/setpoint/state,' + status.setPoint[1]);
     console.log('pentair/saltppm/state,' + status.saltPPM);
     console.log('pentair/ph/state,' + status.pH);
     console.log('pentair/saturation/state,' + status.saturation);

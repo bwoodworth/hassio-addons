@@ -14,14 +14,32 @@ function connect(client) {
     this.getPoolStatus();
     console.log(' version=' + version.version);
   }).on('poolStatus', function(status) {
+	console.log(JSON.stringify(status, undefined, 4));
     this.getChemicalData();
     console.log(' pool ok=' + status.ok);
     console.log(' pool active=' + status.isPoolActive());
     console.log(' pool temp=' + status.currentTemp[0]);
-    console.log(' pool heatStatuse=' + status.heatStatus[0]);
+    console.log(' pool settemp=' + status.setPoint[0]);
+	console.log(' pool heatStatuse=' + status.heatStatus[0]);
+	if(status.heatMode[0] == 3)
+	{
+		console.log(' pool heatStatuse=heat');
+	}
+	else
+	{
+		console.log(' pool heatStatuse=off');
+	}
     console.log(' spa active=' + status.isSpaActive());
     console.log(' spa temp=' + status.currentTemp[1]);
-    console.log(' spa heatStatus=' + status.heatStatus[1]);
+    console.log(' spa settemp=' + status.setPoint[1]);
+    if(status.heatMode[1] == 3)
+	{
+		console.log(' spa heatStatuse=heat');
+	}
+	else
+	{
+		console.log(' spa heatStatuse=off');
+	}
     console.log(' salt ppm=' + status.saltPPM);
     console.log(' pH=' + status.pH);
     console.log(' saturation=' + status.saturation);

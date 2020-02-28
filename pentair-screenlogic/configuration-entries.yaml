@@ -1,3 +1,5 @@
+# You can create more switches for other circuits in you pool controller (lights, jets, cleaner, etc.)  
+# Just use the same convention and change the circuit ID
 switch:
   - platform: mqtt
     name: pentair_pool
@@ -9,10 +11,37 @@ switch:
     command_topic: pentair/circuit/500/command
     state_topic: pentair/circuit/500/state
 
-# You can create more switches for other circuits in you pool controller (lights, jets, cleaner, etc.)  
-# Just use the same convention and change the circuit ID
 
-
+# If you want to set up a thermostat device in HA to control the heater on your pool or spa
+climate:
+  - platform: mqtt
+    name: "Pool"
+    min_temp: 40
+    max_temp: 104
+    modes:
+      - "off"
+      - "heat"
+    current_temperature_topic: pentair/pooltemp/state
+    action_topic: pentair/circuit/505/state
+    mode_command_topic: pentair/heater/pool/mode/set
+    mode_state_topic: pentair/heater/pool/mode/state
+    temperature_command_topic: pentair/heater/pool/temperature/set
+    temperature_state_topic: pentair/heater/pool/setpoint/state
+  - platform: mqtt
+    name: "Spa"
+    min_temp: 40
+    max_temp: 104
+    modes:
+      - "off"
+      - "heat"
+    current_temperature_topic: pentair/spatemp/state
+    action_topic: pentair/circuit/500/state
+    mode_command_topic: pentair/heater/spa/mode/set
+    mode_state_topic: pentair/heater/spa/mode/state
+    temperature_command_topic: pentair/heater/spa/temperature/set
+    temperature_state_topic: pentair/heater/spa/setpoint/state
+    
+# sensors to contain the values from ScreenLogic.  If you are using the thermostat config from above you can probably skip the pooltemp and spatemp
 sensor:
 
   - platform: mqtt

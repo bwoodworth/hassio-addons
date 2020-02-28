@@ -168,6 +168,30 @@ else
     elif [ "${MESSAGE}" == "OFF" ]; then
       ./set_circuit $SCREENLOGICIP 519 0
     fi
+    ;;
+    "pentair/heater/spa/mode/set")
+    if [ "${MESSAGE}" == "heat" ]; then
+      ./set_heater $SCREENLOGICIP 1 1
+    elif [ "${MESSAGE}" == "off" ]; then
+      ./set_heater $SCREENLOGICIP 1 0
+    fi
+    ;;
+    "pentair/heater/pool/mode/set")
+    if [ "${MESSAGE}" == "heat" ]; then
+      ./set_heater $SCREENLOGICIP 0 1
+    elif [ "${MESSAGE}" == "off" ]; then
+      ./set_heater $SCREENLOGICIP 0 0
+    fi
+	;;
+	"pentair/heater/spa/temperature/set")
+	if [ 1 ]; then
+      ./set_temp $SCREENLOGICIP 1 "${MESSAGE}"
+    fi
+	;;
+	"pentair/heater/pool/temperature/set")
+	if [ 1 ]; then
+      ./set_temp $SCREENLOGICIP 0 "${MESSAGE}"
+    fi
   esac
 fi
 
