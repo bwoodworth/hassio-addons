@@ -24,6 +24,9 @@
 ## 1.11
 - typos and mistakes
 
-## 1.11
+## 1.12
 - added thermostat config
 - added ability to change heater state and temperature set points
+
+## 1.13
+- fixed issue with setting temperature
