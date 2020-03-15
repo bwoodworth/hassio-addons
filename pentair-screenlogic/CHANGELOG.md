@@ -28,5 +28,5 @@
 - added thermostat config
 - added ability to change heater state and temperature set points
 
-## 1.14
+## 1.15
 - fixed issue with setting temperature
