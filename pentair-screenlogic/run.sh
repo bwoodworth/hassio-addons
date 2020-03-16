@@ -185,12 +185,12 @@ else
     ;;
     "pentair/heater/spa/temperature/set")
     if [ 1 ]; then
-      ./set_temp $SCREENLOGICIP 1 "${MESSAGE}"
+      ./set_temp $SCREENLOGICIP 1 "${MESSAGE}"
     fi
     ;;
     "pentair/heater/pool/temperature/set")
     if [ 1 ]; then
-      ./set_temp $SCREENLOGICIP 0 "${MESSAGE}"
+      ./set_temp $SCREENLOGICIP 0 "${MESSAGE}"
     fi
   esac
 fi
