@@ -73,6 +73,10 @@ sensor:
     state_topic: pentair/ph/state
 
   - platform: mqtt
+    name: pentair_orp
+    state_topic: pentair/orp/state
+
+  - platform: mqtt
     name: pentair_saltppm
     state_topic: pentair/saltppm/state
 

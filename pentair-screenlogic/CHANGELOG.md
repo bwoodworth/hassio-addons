@@ -30,3 +30,6 @@
 
 ## 1.16
 - fixed issue with setting temperature
+
+## 1.17
+- Added ORP

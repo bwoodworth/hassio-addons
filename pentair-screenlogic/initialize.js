@@ -42,6 +42,7 @@ function connect(client) {
 	}
     console.log(' salt ppm=' + status.saltPPM);
     console.log(' pH=' + status.pH);
+    console.log(' orp=' + status.orp);
     console.log(' saturation=' + status.saturation);
     console.log(' air temp=' + status.airTemp);
     console.log(' freezeMode=' + status.freezeMode);
