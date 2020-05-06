@@ -33,3 +33,6 @@
 
 ## 1.17
 - Added ORP
+
+## 1.18
+- removed action_topic from config

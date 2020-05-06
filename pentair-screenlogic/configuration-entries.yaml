@@ -22,7 +22,6 @@ climate:
       - "off"
       - "heat"
     current_temperature_topic: pentair/pooltemp/state
-    action_topic: pentair/circuit/505/state
     mode_command_topic: pentair/heater/pool/mode/set
     mode_state_topic: pentair/heater/pool/mode/state
     temperature_command_topic: pentair/heater/pool/temperature/set
@@ -35,7 +34,6 @@ climate:
       - "off"
       - "heat"
     current_temperature_topic: pentair/spatemp/state
-    action_topic: pentair/circuit/500/state
     mode_command_topic: pentair/heater/spa/mode/set
     mode_state_topic: pentair/heater/spa/mode/state
     temperature_command_topic: pentair/heater/spa/temperature/set
