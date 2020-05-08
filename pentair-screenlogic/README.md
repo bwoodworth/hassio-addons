@@ -1,5 +1,3 @@
-** Credit goes to https://github.com/krk628/hassio-screenlogic-addon for creating the initial proof of concept that this plugin is based on
-
 # Control Pentair Pool Circuits via Screenlogic IP and Receive Status updates
 
 Home Assistant addon for communicating with Pentair EasyTouch via Screenlogic IP via nodejs
@@ -26,3 +24,4 @@ Home Assistant addon for communicating with Pentair EasyTouch via Screenlogic IP
 
 * You should be getting values into the sensor entities and be able to turn the configured circuits ON/OFF
 
+** Credit goes to https://github.com/krk628/hassio-screenlogic-addon for creating the initial proof of concept that this plugin is based on
