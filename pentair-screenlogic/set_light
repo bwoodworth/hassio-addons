@@ -1,0 +1,17 @@
+#!/usr/bin/node
+// Send command to set the configuration of a light.
+
+const ScreenLogic = require('./index');
+
+var myArgs = process.argv.slice(2);
+
+connect(new ScreenLogic.UnitConnection(80, myArgs[0]), parseInt(myArgs[1]));
+
+function connect(client, command) {
+  client.on('loggedIn', function() {
+    this.sendLightCommand(0, command);
+      client.close();
+  });
+
+  client.connect();
+}

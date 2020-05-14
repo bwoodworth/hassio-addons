@@ -192,6 +192,11 @@ else
     if [ 1 ]; then
       ./set_temp $SCREENLOGICIP 0 "${MESSAGE}"
     fi
+    ;;
+    "pentair/light/command")
+    if [ 1 ]; then
+      ./set_light $SCREENLOGICIP "${MESSAGE}"
+    fi
   esac
 fi
 
