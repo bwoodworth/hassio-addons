@@ -197,11 +197,10 @@ else
     if [ 1 ]; then
       ./set_light $SCREENLOGICIP "${MESSAGE}"
     fi
-  esac
+    esac
 fi
 
 # change IP address (-h) port (-p) username (-u) and password (-P) to match your MQTT broker settings
 node send_state_to_ha.js $SCREENLOGICIP | awk -F, '{print "mosquitto_pub -h '"$MQTTIP"' -p '"$MQTTPORT"' -u '"$MQTTUSER"' -P '"$MQTTPASS"' -t " $1 " -m " $2}' | bash -s
-
 
 done

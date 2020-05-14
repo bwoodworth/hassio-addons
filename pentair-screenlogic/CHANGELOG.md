@@ -36,3 +36,6 @@
 
 ## 1.18
 - removed action_topic from config
+
+## 1.19
+- added lighting controls (d0nni3q84)
