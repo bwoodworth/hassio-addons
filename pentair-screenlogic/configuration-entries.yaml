@@ -83,79 +83,79 @@ sensor:
 
 # Use scripts to send lighting commands to ScreenLogic via MQTT.
 script:
-  pool_lights_off:
+  pentair_lights_off:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 0
-  pool_lights_on:
+  pentair_lights_on:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 1
-  pool_lights_party:
+  pentair_lights_party:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 5
-  pool_lights_romance:
+  pentair_lights_romance:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 6
-  pool_lights_caribbean:
+  pentair_lights_caribbean:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 7
-  pool_lights_american:
+  pentair_lights_american:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 8
-  pool_lights_california_sunset:
+  pentair_lights_california_sunset:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 9
-  pool_lights_royal:
+  pentair_lights_royal:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 10
-  pool_lights_blue:
+  pentair_lights_blue:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 13
-  pool_lights_green:
+  pentair_lights_green:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 14
-  pool_lights_red:
+  pentair_lights_red:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 15
-  pool_lights_white:
+  pentair_lights_white:
     sequence:
       - service: mqtt.publish
         data_template:
           topic: pentair/light/command
           payload: 16
-  pool_lights_purple:
+  pentair_lights_purple:
     sequence:
       - service: mqtt.publish
         data_template:
@@ -168,22 +168,22 @@ cards:
     title: Lights
     show_header_toggle: false
     entities:
-      - entity: script.pool_lights_on
+      - entity: script.pentair_lights_on
         type: button
         name: All Lights
         icon: mdi:lightbulb
         action_name: 'ON'
         tap_action:
           action: call-service
-          service: script.pool_lights_on
+          service: script.pentair_lights_on
       - type: button
-        entity: script.pool_lights_off
+        entity: script.pentair_lights_off
         name: All Lights
         icon: mdi:lightbulb-off
         action_name: 'OFF'
         tap_action:
           action: call-service
-          service: script.pool_lights_off
+          service: script.pentair_lights_off
       - entity: switch.pool_light
         name: Pool
         icon: mdi:lightbulb
@@ -199,92 +199,92 @@ cards:
       - type: vertical-stack
         cards:
           - type: entity-button
-            entity: script.pool_lights_red
+            entity: script.pentair_lights_red
             name: Red
             icon: mdi:radiobox-marked
             tap_action:
               action: call-service
-              service: script.pool_lights_red
+              service: script.pentair_lights_red
           - type: entity-button
-            entity: script.pool_lights_purple
+            entity: script.pentair_lights_purple
             name: Purple
             icon: mdi:radiobox-marked
             tap_action:
               action: call-service
-              service: script.pool_lights_purple
+              service: script.pentair_lights_purple
       - type: vertical-stack
         cards:
           - type: entity-button
-            entity: script.pool_lights_green
+            entity: script.pentair_lights_green
             name: Green
             icon: mdi:radiobox-marked
             tap_action:
               action: call-service
-              service: script.pool_lights_green
+              service: script.pentair_lights_green
           - type: entity-button
-            entity: script.pool_lights_white
+            entity: script.pentair_lights_white
             name: White
             icon: mdi:radiobox-marked
             tap_action:
               action: call-service
-              service: script.pool_lights_white
+              service: script.pentair_lights_white
       - type: vertical-stack
         cards:
           - type:  entity-button
-            entity: script.pool_lights_blue
+            entity: script.pentair_lights_blue
             name: Blue
             icon: mdi:radiobox-marked
             tap_action:
               action: call-service
-              service: script.pool_lights_blue
+              service: script.pentair_lights_blue
   - type: horizontal-stack
     title: Light Modes
     cards:
       - type: vertical-stack
         cards:
           - type: entity-button
-            entity: script.pool_lights_party
+            entity: script.pentair_lights_party
             name: Party
             icon: mdi:party-popper
             tap_action:
               action: call-service
-              service: script.pool_lights_party
+              service: script.pentair_lights_party
           - type: entity-button
-            entity: script.pool_lights_american
+            entity: script.pentair_lights_american
             name: American
             icon: mdi:flag
             tap_action:
               action: call-service
-              service: script.pool_lights_american
+              service: script.pentair_lights_american
       - type: vertical-stack
         cards:
           - type: entity-button
-            entity: script.pool_lights_romance
+            entity: script.pentair_lights_romance
             name: Romance
             icon: mdi:heart
             tap_action:
               action: call-service
-              service: script.pool_lights_romance
+              service: script.pentair_lights_romance
           - type: entity-button
-            entity: script.pool_lights_california_sunset
+            entity: script.pentair_lights_california_sunset
             name: California Sunset
             icon: mdi:weather-sunset
             tap_action:
               action: call-service
-              service: script.pool_lights_california_sunset
+              service: script.pentair_lights_california_sunset
       - type: vertical-stack
         cards:
           - type: entity-button
-            entity: script.pool_lights_caribbean
+            entity: script.pentair_lights_caribbean
             name: Caribbean
             icon: mdi:palm-tree
             tap_action:
               action: call-service
-              service: script.pool_lights_caribbean
+              service: script.pentair_lights_caribbean
           - type: entity-button
-            entity: script.pool_lights_royal
+            entity: script.pentair_lights_royal
             name: Royal
             icon: mdi:crown
             tap_action:
               action: call-service
-              service: script.pool_lights_royal
+              service: script.pentair_lights_royal
