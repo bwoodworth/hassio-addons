@@ -39,3 +39,6 @@
 
 ## 1.19
 - added lighting controls (d0nni3q84)
+
+## 1.2
+- Added optional configuration setting for SL password
