@@ -1,6 +1,6 @@
-# Control Pentair Pool Circuits via Screenlogic IP and Receive Status updates
+# pentair-screenlogic
 
-Home Assistant addon for communicating with Pentair EasyTouch via Screenlogic IP via nodejs
+## Screen Logic AddOn for [Home Assistant](https://www.home-assistant.io/) using the [node-screenlogic](https://github.com/parnic/node-screenlogic) library
 
 ## Instructions
 
