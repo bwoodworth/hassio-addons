@@ -3,9 +3,8 @@
 const ScreenLogic = require('./index');
 
 var myArgs = process.argv.slice(2);
-var screenLogic_password = process.env.ScreenLogic_password;
 
-connect(new ScreenLogic.UnitConnection(80, myArgs[0], screenLogic_password));
+connect(new ScreenLogic.UnitConnection(80, myArgs[0]));
 
 function connect(client) {
   client.on('loggedIn', function() {

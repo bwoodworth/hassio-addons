@@ -4,9 +4,8 @@
 const ScreenLogic = require('./index');
 
 var myArgs = process.argv.slice(2);
-var screenLogic_password = process.env.ScreenLogic_password;
 
-connect(new ScreenLogic.UnitConnection(80, myArgs[0], screenLogic_password), parseInt(myArgs[1]), parseInt(myArgs[2]));
+connect(new ScreenLogic.UnitConnection(80, myArgs[0]), parseInt(myArgs[1]), parseInt(myArgs[2]));
 
 function connect(client, circuit, onoff) {
   client.on('loggedIn', function() {

@@ -12,15 +12,13 @@
     "MQTT_port": "1883",
     "MQTT_user": "hassio",
     "MQTT_password": "hassio",
-    "ScreenLogic_server": "127.0.0.1",
-    "ScreenLogic_password": "NotRequired"
+    "ScreenLogic_server": "127.0.0.1"
   },
   "schema": {
     "MQTT_server": "str",
     "MQTT_port": "str",
     "MQTT_user": "str",
     "MQTT_password": "str",
-    "ScreenLogic_server": "str",
-    "ScreenLogic_password": "str?"
+    "ScreenLogic_server": "str"
   }
 }
