@@ -2,10 +2,9 @@
 
 const ScreenLogic = require('./index');
 
-var myArgs = process.argv.slice(2);
-var screenLogic_password = process.env.ScreenLogic_password;
+var screenLogic_ip = process.env.SCREENLOGICIP;
 
-connect(new ScreenLogic.UnitConnection(80, myArgs[0], screenLogic_password));
+connect(new ScreenLogic.UnitConnection(80, screenLogic_ip));
 
 // generic connection method used by all above examples
 function connect(client) {
@@ -57,6 +56,9 @@ function connect(client) {
     }).on('saltCellConfig', function(saltCellConfig) {
       this.getControllerConfig();
       console.log(' salt cell installed=' + saltCellConfig.installed);
+      console.log(' salt cell satus=' + saltCellConfig.status);
+      console.log(' salt cell level 1=' + saltCellConfig.level1);
+      console.log(' salt cell level 2=' + saltCellConfig.level2);
     }).on('controllerConfig', function(config) {
       console.log(' controller is in celsius=' + config.degC);
       console.log(' controllerId=' + config.controllerId);

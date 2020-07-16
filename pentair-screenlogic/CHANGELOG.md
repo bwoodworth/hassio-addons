@@ -42,3 +42,9 @@
 
 ## 1.2
 - Added optional configuration setting for SL password
+
+## 1.21
+- Updated circuits to be dynamic.  No longer a limit to the number of circuits supported.
+- Added pump info
+- Added salt info
+- Removed password support

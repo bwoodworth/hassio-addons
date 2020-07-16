@@ -7,6 +7,7 @@ RUN apk add npm jq mosquitto-clients && npm install node-screenlogic smart-buffe
 
 COPY run.sh /
 COPY set_circuit /node_modules/node-screenlogic/
+COPY set_salt /node_modules/node-screenlogic/
 COPY set_temp /node_modules/node-screenlogic/
 COPY set_heater /node_modules/node-screenlogic/
 COPY set_light /node_modules/node-screenlogic/

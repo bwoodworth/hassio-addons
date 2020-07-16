@@ -78,8 +78,56 @@ sensor:
     state_topic: pentair/saltppm/state
 
   - platform: mqtt
+    name: pentair_saltcellstatus
+    state_topic: pentair/saltcellstatus/state
+
+  - platform: mqtt
+    name: pentair_saltcelllevel1
+    state_topic: pentair/saltcelllevel1/state
+
+  - platform: mqtt
+    name: pentair_saltcelllevel2
+    state_topic: pentair/saltcelllevel2/state
+
+  - platform: mqtt
     name: pentair_saturation
     state_topic: pentair/saturation/state
+  
+  - platform: mqtt
+    name: pentair_pump0watts
+    state_topic: pentair/pump/0/watts/state
+
+  - platform: mqtt
+    name: pentair_pump0rpm
+    state_topic: pentair/pump/0/rpm/state
+  
+   - platform: mqtt
+    name: pentair_pump0gpm
+    state_topic: pentair/pump/0/gpm/state
+  
+   - platform: mqtt
+    name: pentair_pump1watts
+    state_topic: pentair/pump/1/watts/state
+  
+  - platform: mqtt
+    name: pentair_pump1rpm
+    state_topic: pentair/pump/1/rpm/state
+  
+  - platform: mqtt
+    name: pentair_pump1gpm
+    state_topic: pentair/pump/1/gpm/state
+  
+  - platform: mqtt
+    name: pentair_pump2watts
+    state_topic: pentair/pump/2/watts/state
+  
+  - platform: mqtt
+    name: pentair_pump2rpm
+    state_topic: pentair/pump/2/rpm/state
+  
+  - platform: mqtt
+    name: pentair_pump2gpm
+    state_topic: pentair/pump/2/gpm/state
 
 # Use scripts to send lighting commands to ScreenLogic via MQTT.
 script:

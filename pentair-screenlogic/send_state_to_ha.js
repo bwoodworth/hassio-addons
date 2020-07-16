@@ -2,10 +2,9 @@
 
 const ScreenLogic = require('./index');
 
-var myArgs = process.argv.slice(2);
-var screenLogic_password = process.env.ScreenLogic_password;
+var screenLogic_ip = process.env.SCREENLOGICIP;
 
-connect(new ScreenLogic.UnitConnection(80, myArgs[0], screenLogic_password));
+connect(new ScreenLogic.UnitConnection(80, screenLogic_ip));
 
 function connect(client) {
   client.on('loggedIn', function() {
@@ -45,9 +44,19 @@ function connect(client) {
       console.log('pentair/circuit/' + status.circuitArray[i].id + '/state,' + (status.circuitArray[i].state ? 'ON' : 'OFF'));
     }
   }).on('chemicalData', function(chemData) {
+    this.getSaltCellConfig();
     console.log('pentair/calcium/state,' + chemData.calcium);
     console.log('pentair/cyanuricacid/state,' + chemData.cyanuricAcid);
     console.log('pentair/alkalinity/state,' + chemData.alkalinity);
+  }).on('saltCellConfig', function(saltCellConfig) {
+    this.getPumpStatus(0);
+    console.log('pentair/saltcellstatus/state,' + saltCellConfig.status);
+    console.log('pentair/saltcelllevel1/state,' + saltCellConfig.level1);
+    console.log('pentair/saltcelllevel2/state,' + saltCellConfig.level2);
+  }).on('getPumpStatus', function(status) {
+    console.log('pentair/pump/0/watts/state,' + status.pumpWatts);
+    console.log('pentair/pump/0/rpm/state,' + status.pumpRPMs);
+    console.log('pentair/pump/0/gpm/state,' + status.pumpGPMs);
     client.close();
   });
 
