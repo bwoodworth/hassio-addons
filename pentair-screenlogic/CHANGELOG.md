@@ -48,3 +48,6 @@
 - Added pump info
 - Added salt info
 - Removed password support
+
+## 1.22
+- Fixed bug with set_salt

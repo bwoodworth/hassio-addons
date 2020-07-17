@@ -11,9 +11,9 @@ connect(new ScreenLogic.UnitConnection(80, screenLogic_ip), parseInt(myArgs[0]),
 function connect(client, poolOrSpa, level) {
   client.on('loggedIn', function() {
     if(poolOrSpa == 0)
-      this.setSaltCellConfig(0, level, isNaN);
+      this.setSaltCellOutput(0, level, null);
     else
-      this.setSaltCellConfig(0, isNaN, level);
+      this.setSaltCellOutput(0, null, level);
     client.close();
   });
 
