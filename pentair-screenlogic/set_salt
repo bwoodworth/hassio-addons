@@ -10,10 +10,12 @@ connect(new ScreenLogic.UnitConnection(80, screenLogic_ip), parseInt(myArgs[0]),
 
 function connect(client, poolOrSpa, level) {
   client.on('loggedIn', function() {
+    this.getSaltCellConfig();
+  }).on('saltCellConfig', function(saltCellConfig) {
     if(poolOrSpa == 0)
-      this.setSaltCellOutput(0, level, null);
+      this.setSaltCellOutput(0, level, saltCellConfig.level2);
     else
-      this.setSaltCellOutput(0, null, level);
+      this.setSaltCellOutput(0, saltCellConfig.level1, level);
     client.close();
   });
 

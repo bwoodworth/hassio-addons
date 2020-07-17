@@ -51,3 +51,6 @@
 
 ## 1.22
 - Fixed bug with set_salt
+
+## 1.23
+- Fixed bug with set_salt again
