@@ -8,6 +8,8 @@ connect(new ScreenLogic.UnitConnection(80, screenLogic_ip));
 
 // generic connection method used by all above examples
 function connect(client) {
+  var pumpID = 0;
+  var numPumps = 0;
   client.on('loggedIn', function() {
     this.getVersion();
   }).on('version', function(version) {
@@ -49,17 +51,12 @@ function connect(client) {
       console.log(' alarms=' + status.alarms);
       console.log(' Number of circuitArray Objects=' + status.circuitArray.length);
     }).on('chemicalData', function(chemData) {
-      this.getSaltCellConfig();
+      this.getControllerConfig();
       console.log(' calcium=' + chemData.calcium);
       console.log(' cyanuric acid=' + chemData.cyanuricAcid);
       console.log(' alkalinity=' + chemData.alkalinity);
-    }).on('saltCellConfig', function(saltCellConfig) {
-      this.getControllerConfig();
-      console.log(' salt cell installed=' + saltCellConfig.installed);
-      console.log(' salt cell satus=' + saltCellConfig.status);
-      console.log(' salt cell level 1=' + saltCellConfig.level1);
-      console.log(' salt cell level 2=' + saltCellConfig.level2);
     }).on('controllerConfig', function(config) {
+      this.getPumpStatus(pumpID);
       console.log(' controller is in celsius=' + config.degC);
       console.log(' controllerId=' + config.controllerId);
       console.log(' pumpCircArray=' + config.pumpCircArray);
@@ -71,6 +68,34 @@ function connect(client) {
         console.log('   circuitId: ' + config.bodyArray[i].circuitId);
         console.log('     name: ' + config.bodyArray[i].name);
       }
+      for(i = 0; i < config.pumpCircArray.length; i++)
+      {
+        if (config.pumpCircArray[i] != 0)
+        {
+          numPumps++;
+        }
+      }
+      console.log('numPumps=' + numPumps);
+    }).on('getPumpStatus', function(status) {
+      console.log(' pumpID '+pumpID+' watts=' + status.pumpWatts);
+      console.log(' pumpID '+pumpID+' rpms=' + status.pumpRPMs);
+      console.log(' pumpID '+pumpID+' gpms=' + status.pumpGPMs);
+      if (pumpID < numPumps-1)
+      {
+        pumpID = pumpID + 1;
+        this.getPumpStatus(pumpID);
+      }
+      else
+      {
+        this.getSaltCellConfig();
+      }
+    }).on('saltCellConfig', function(saltCellConfig) {
+      console.log(' salt cell installed=' + saltCellConfig.installed);
+      console.log(' salt cell satus=' + saltCellConfig.status);
+      console.log(' salt cell level 1=' + saltCellConfig.level1);
+      console.log(' salt cell level 2=' + saltCellConfig.level2);
+      
+      console.log('CLOSING CONNECTION')
       client.close();
     });
 

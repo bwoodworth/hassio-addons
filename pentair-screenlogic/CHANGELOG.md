@@ -54,3 +54,6 @@
 
 ## 1.23
 - Fixed bug with set_salt again
+
+## 1.24
+- Fixed issue with pumps reporting correct data
