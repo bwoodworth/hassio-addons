@@ -6,6 +6,7 @@ MQTTIP=$(jq --raw-output ".MQTT_server" $CONFIG_PATH)
 MQTTPORT=$(jq --raw-output ".MQTT_port" $CONFIG_PATH)
 MQTTUSER=$(jq --raw-output ".MQTT_user" $CONFIG_PATH)
 MQTTPASS=$(jq --raw-output ".MQTT_password" $CONFIG_PATH)
+MQTTWAIT=$(jq --raw-output ".MQTT_wait" $CONFIG_PATH)
 export SCREENLOGICIP=$(jq --raw-output ".ScreenLogic_server" $CONFIG_PATH)
 
 cd /node_modules/node-screenlogic
@@ -14,7 +15,7 @@ node initialize.js
 
 while [ 1 ]; do
 # change IP address (-h) port (-p) username (-u) and password (-P) to match your MQTT broker settings
-PAYLOAD=`mosquitto_sub -h $MQTTIP -p $MQTTPORT -u $MQTTUSER -P $MQTTPASS -v -t pentair/# -W 10 -C 1`
+PAYLOAD=`mosquitto_sub -h $MQTTIP -p $MQTTPORT -u $MQTTUSER -P $MQTTPASS -v -t pentair/# -W $MQTTWAIT -C 1`
 if [ $? -gt 0 ]; then
   echo "MQTT Client exited with non-zero status"
   sleep 10
