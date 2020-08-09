@@ -21,6 +21,6 @@
     "MQTT_user": "str",
     "MQTT_password": "str",
     "ScreenLogic_server": "str",
-    "MQTT_wait": "str
+    "MQTT_wait": "str"
   }
 }

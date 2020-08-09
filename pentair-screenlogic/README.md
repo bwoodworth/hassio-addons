@@ -17,8 +17,11 @@
   MQTT_user - MQTT server username
   
   MQTT_password - MQTT server password
+
+  MQTT_wait - Wait time listening for a new command, effectively the time between MQTT message groups
   
   ScreenLogic_server - IP address of the ScreenLogic controller
+
   
 * Add the entities from configuration-entries.yaml to the HASS configuration...use those command_topic and state_topic attributes exactly as that's what the addon is using.  Restart your Home Assistant so you see the new entities.
 
