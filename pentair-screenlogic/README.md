@@ -22,7 +22,6 @@
   
   ScreenLogic_server - IP address of the ScreenLogic controller
 
-  
 * Add the entities from configuration-entries.yaml to the HASS configuration...use those command_topic and state_topic attributes exactly as that's what the addon is using.  Restart your Home Assistant so you see the new entities.
 
 * You should be getting values into the sensor entities and be able to turn the configured circuits ON/OFF
