@@ -20,7 +20,7 @@
     "MQTT_port": "str",
     "MQTT_user": "str",
     "MQTT_password": "str",
-    "MQTT_wait": "str"
-    "ScreenLogic_server": "str",
+    "MQTT_wait": "str",
+    "ScreenLogic_server": "str"
   }
 }
