@@ -57,3 +57,6 @@
 
 ## 1.24
 - Fixed issue with pumps reporting correct data
+
+## 1.25
+- potential fix for systems with no spa
