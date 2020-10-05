@@ -61,7 +61,6 @@ function connect(client) {
     console.log(' cyanuric acid=' + chemData.cyanuricAcid);
     console.log(' alkalinity=' + chemData.alkalinity);
   }).on('controllerConfig', function(config) {
-    this.getPumpStatus(pumpID);
     console.log(' controller is in celsius=' + config.degC);
     console.log(' controllerId=' + config.controllerId);
     console.log(' pumpCircArray=' + config.pumpCircArray);
@@ -79,6 +78,13 @@ function connect(client) {
       {
         numPumps++;
       }
+    }
+    if (numPumps > 0)
+    {
+      this.getPumpStatus(pumpID);
+    }
+    else{
+      this.getSaltCellConfig();
     }
     console.log('numPumps=' + numPumps);
   }).on('getPumpStatus', function(status) {

@@ -54,7 +54,6 @@ function connect(client) {
     console.log('pentair/cyanuricacid/state,' + chemData.cyanuricAcid);
     console.log('pentair/alkalinity/state,' + chemData.alkalinity);
   }).on('controllerConfig', function(config) {
-    this.getPumpStatus(pumpID);
     var i;
     for(i = 0; i < config.pumpCircArray.length; i++)
     {
@@ -62,6 +61,13 @@ function connect(client) {
       {
         numPumps++;
       }
+    }
+    if (numPumps > 0)
+    {
+      this.getPumpStatus(pumpID);
+    }
+    else{
+      this.getSaltCellConfig();
     }
   }).on('getPumpStatus', function(status) {
     console.log('pentair/pump/'+pumpID+'/watts/state,' + status.pumpWatts);

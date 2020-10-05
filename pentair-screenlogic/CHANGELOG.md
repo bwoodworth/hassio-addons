@@ -60,3 +60,6 @@
 
 ## 1.25
 - potential fix for systems with no spa
+
+## 1.26
+- fixed issue for systems with no pumps
