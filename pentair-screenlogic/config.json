@@ -1,11 +1,10 @@
 {
   "name": "Pentair Screenlogic",
-  "version": "1.26",
+  "version": "1.27",
   "slug": "pentair_screenlogic",
   "description": "Pentair Screenlogic",
   "url": "https://github.com/bwoodworth/hassio-addons/tree/master/pentair-screenlogic",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "startup": "before",
   "boot": "auto",
   "options": {
     "MQTT_server": "127.0.0.1",

@@ -63,3 +63,6 @@
 
 ## 1.26
 - fixed issue for systems with no pumps
+
+## 1.27
+- removed deprecated setting
