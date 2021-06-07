@@ -3,7 +3,7 @@
   "version": "1.27",
   "slug": "pentair_screenlogic",
   "description": "Pentair Screenlogic",
-  "url": "https://github.com/bwoodworth/hassio-addons/tree/master/pentair-screenlogic",
+  "url": "https://github.com/Scott8586/hassio-addons/tree/master/pentair-screenlogic",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "boot": "auto",
   "options": {
@@ -11,6 +11,7 @@
     "MQTT_port": "1883",
     "MQTT_user": "hassio",
     "MQTT_password": "hassio",
+    "MQTT_wait": "10",
     "ScreenLogic_server": "127.0.0.1"
   },
   "schema": {
@@ -18,6 +19,7 @@
     "MQTT_port": "str",
     "MQTT_user": "str",
     "MQTT_password": "str",
+    "MQTT_wait": "str",
     "ScreenLogic_server": "str"
   }
 }
